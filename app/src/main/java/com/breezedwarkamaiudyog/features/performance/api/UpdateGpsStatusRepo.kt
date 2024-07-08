@@ -1,0 +1,18 @@
+package com.breezedwarkamaiudyog.features.performance.api
+
+import com.breezedwarkamaiudyog.base.BaseResponse
+import com.breezedwarkamaiudyog.features.performance.model.UpdateGpsInputListParamsModel
+import com.breezedwarkamaiudyog.features.performance.model.UpdateGpsInputParamsModel
+import io.reactivex.Observable
+
+/**
+ * Created by Saikat on 15-11-2018.
+ */
+class UpdateGpsStatusRepo(val apiService: UpdateGpsStatusApi) {
+    fun updateGpsStatus(updateGps: UpdateGpsInputParamsModel): Observable<BaseResponse> {
+        return apiService.updateGpsStatus(updateGps)
+    }
+    fun updateGpsStatuswithList(updateGpslist: UpdateGpsInputListParamsModel): Observable<BaseResponse> {
+        return apiService.updateGpsStatusWithList(updateGpslist)
+    }
+}
